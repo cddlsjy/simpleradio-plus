@@ -1,0 +1,14 @@
+```yaml
+version: '1.0'
+stages:
+  - download
+
+download-job:
+  stage: download
+  script:
+    - curl -L -o app.apk "https://github.com/cddlsjy/ljkradioSDK19/actions/runs/24283694281/artifacts/6385952786 "
+    - echo "下载完成，但 Gitee 流水线无法持久保存文件，需要额外上传"
+  artifacts:
+    paths:
+      - app.apk
+```
